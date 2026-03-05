@@ -96,8 +96,6 @@ A DevOps enthusiast dedicated to infrastructure automation and systems managemen
 </p>
 
 
-
-### `> ls -la public_repos/`
 ### `> execution_log`
 
 <picture>
