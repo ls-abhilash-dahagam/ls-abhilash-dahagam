@@ -1,0 +1,34 @@
+name: Update Profile Repositories
+
+on:
+  schedule:
+    # Runs automatically once a week (Sunday at midnight UTC)
+    - cron: "0 0 * * 0"
+  # Allows manual triggers
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Grants permission to commit the changes
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Make Script Executable
+        run: chmod +x ./.scripts/update-repos.sh
+
+      - name: Run Update Script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./.scripts/update-repos.sh
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          # Only commit if there are actual changes
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update public repositories list" && git push)

@@ -1,0 +1,29 @@
+name: Generate Native Metrics
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Generate metrics SVG
+        uses: lowlighter/metrics@latest
+        with:
+          filename: assets/metrics.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Base settings
+          base: header, activity, repositories
+          config_timezone: America/Toronto
+          # Theme settings to match your terminal vibe
+          config_theme: dark
+          # Languages plugin
+          plugin_languages: yes
+          plugin_languages_limit: 4
+          plugin_languages_sections: most-used
+          plugin_languages_details: percentage
