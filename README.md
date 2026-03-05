@@ -1,6 +1,5 @@
 ### `> system_daemons --status`
 [![Native Metrics](https://github.com/ls-abhilash-dahagam/ls-abhilash-dahagam/actions/workflows/fetch-metrics.yml/badge.svg)](https://github.com/ls-abhilash-dahagam/ls-abhilash-dahagam/actions/workflows/fetch-metrics.yml)
-[![Repo Updater](https://github.com/ls-abhilash-dahagam/ls-abhilash-dahagam/actions/workflows/update-repos.yml/badge.svg)](https://github.com/ls-abhilash-dahagam/ls-abhilash-dahagam/actions/workflows/update-repos.yml)
 [![Snake Grid](https://github.com/ls-abhilash-dahagam/ls-abhilash-dahagam/actions/workflows/generate-snake-animation.yml/badge.svg)](https://github.com/ls-abhilash-dahagam/ls-abhilash-dahagam/actions/workflows/generate-snake-animation.yml)
 
 ---
@@ -49,7 +48,6 @@ A DevOps enthusiast dedicated to infrastructure automation and systems managemen
   <img src="./assets/metrics.svg" alt="Native GitHub Metrics" />
 </p>
 
-### `> ls -la public_repos/`
 ### `> execution_log`
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ls-abhilash-dahagam/ls-abhilash-dahagam/output/github-contribution-grid-snake-dark.svg">
